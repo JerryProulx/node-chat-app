@@ -9,11 +9,11 @@ socket.on('connect', function() {
   //   });
   // });
 
-  socket.emit('createMessage', {
-      from: 'Me',
-      text: 'Yah!'
-    });
-  });
+  // socket.emit('createMessage', {
+  //     from: 'Me',
+  //     text: 'Yah!'
+  //   });
+});
 
 socket.on('disconnect', function() {
   console.log('Server disconnected');

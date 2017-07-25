@@ -104,7 +104,6 @@ jQuery('#message-form').on('submit', function(e){
     return false;
   }
   socket.emit('createMessage', {
-    from: 'User',
     text: messageTextBox.val()
   }, function() {
     messageTextBox.val('');
@@ -127,6 +126,8 @@ locatioButton.on('click', function(e){
     socket.emit('createLocationMessage', {
       latitude: position.coords.latitude,
       longitude: position.coords.longitude
+    }, function(){
+      alert('error');
     });
 
   }, function(error){
